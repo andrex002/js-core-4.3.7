@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/Roboto-Regular.woff2") format("woff2"), url("fonts/Roboto-Regular.woff") format("woff");
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    line-height: 1.17;
+    font-weight: 400;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    width: 661px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 62px 80px 72px;
+    background-color: #c4c4c4;
+}
+
+.search {
+    position: relative;
+    margin-bottom: 265px;
+}
+
+.search__input {
+    width: 100%;
+    padding: 3px 13px;
+    font-family: inherit;
+    font-size: 48px;
+    border: 0;
+}
+
+.search__list {
+    position: absolute;
+    width: 100%;
+}
+
+.search__item {
+    padding: 3px 11px;
+    font-size: 30px;
+    border: 2px solid #000;
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
+.search__item:hover {
+    background-color: #65CDF9;
+}
+
+.repositories__item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #000;
+    background-color: #E27BEB;
+}
+
+.repositories__info {
+    flex: 1 0 auto;
+}
+
+.repositories__btn-remove {
+    position: relative;
+    width: 42px;
+    height: 39px;
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.repositories__btn-remove::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 17px;
+    width: 54px;
+    height: 4px;
+    background-color: #ff0000;
+    transform: rotate(42deg);
+}
+
+.repositories__btn-remove::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 17px;
+    width: 54px;
+    height: 4px;
+    background-color: #ff0000;
+    transform: rotate(-42deg);
+}
+
+@media (max-width: 520px) {
+    .app {
+        padding: 40px 20px 50px;
+    }
+}
